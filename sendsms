@@ -1,0 +1,4 @@
+#!/bin/bash
+echo -e "AT+CMGF=1\r\n"  > /dev/ttyUSB2
+echo -e "AT+CMGS=\"${1}\"\r\n" > /dev/ttyUSB2
+echo -e "${2}\032\r\n" > /dev/ttyUSB2
